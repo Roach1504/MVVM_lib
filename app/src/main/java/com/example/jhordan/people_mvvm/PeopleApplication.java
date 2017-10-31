@@ -42,7 +42,6 @@ public class PeopleApplication extends Application {
     if (peopleService == null) {
       peopleService = PeopleFactory.create();
     }
-
     return peopleService;
   }
 
@@ -50,7 +49,6 @@ public class PeopleApplication extends Application {
     if (scheduler == null) {
       scheduler = Schedulers.io();
     }
-
     return scheduler;
   }
 

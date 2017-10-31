@@ -62,10 +62,8 @@ public class PeopleViewModel extends Observable {
   }
 
   private void fetchPeopleList() {
-
     PeopleApplication peopleApplication = PeopleApplication.create(context);
     PeopleService peopleService = peopleApplication.getPeopleService();
-
     Disposable disposable = peopleService.fetchPeople(PeopleFactory.RANDOM_USER_URL)
         .subscribeOn(peopleApplication.subscribeScheduler())
         .observeOn(AndroidSchedulers.mainThread())

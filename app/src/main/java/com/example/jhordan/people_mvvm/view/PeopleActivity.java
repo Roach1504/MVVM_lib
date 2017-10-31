@@ -49,7 +49,7 @@ public class PeopleActivity extends AppCompatActivity implements Observer {
   private void initDataBinding() {
     peopleActivityBinding = DataBindingUtil.setContentView(this, R.layout.people_activity);
     peopleViewModel = new PeopleViewModel(this);
-    peopleActivityBinding.setMainViewModel(peopleViewModel);
+    peopleActivityBinding.setMaiViewModel(peopleViewModel);
   }
 
   private void setupListPeopleView(RecyclerView listPeople) {
@@ -73,7 +73,7 @@ public class PeopleActivity extends AppCompatActivity implements Observer {
   }
 
   @Override public boolean onOptionsItemSelected(MenuItem item) {
-    if (item.getItemId() == R.id.menu_github) {
+    if (item.getItemId() == R.id.menu_setting) {
       startActivityActionView();
       return true;
     }

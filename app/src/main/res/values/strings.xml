@@ -9,4 +9,8 @@
 
     <string name="error_loading_people">There seems to have been some error.</string>
     <string name="default_loading_people">Press the button to load people!</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="title_home">Новости</string>
+    <string name="title_dashboard">Чат</string>
+    <string name="title_notifications">Поиск</string>
 </resources>

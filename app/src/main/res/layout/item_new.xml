@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="ItemNewsViewModel"
+            type="com.example.jhordan.people_mvvm.viewmodel.ItemNewsViewModel" />
+    </data>
+
+    <RelativeLayout
+        android:id="@+id/item_people"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="2dp"
+        android:background="?attr/selectableItemBackground"
+        android:elevation="2dp"
+        android:onClick="@{ItemNewsViewModel::OnItemClick}"
+        android:orientation="horizontal"
+        android:paddingBottom="8dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="24dp"
+            android:text="@{ItemNewsViewModel::getTitle}"
+            android:textColor="@color/textHead"
+            android:textSize="18dp"
+            tools:text="Заголовок"
+            android:layout_below="@+id/data"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:id="@+id/shorts"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{ItemNewsViewModel::getShort}"
+            android:textColor="@color/textSubtitle"
+            android:textSize="14dp"
+            android:layout_marginBottom="8dp"
+            tools:text="Краткое описание"
+            android:layout_below="@+id/title"
+            android:layout_alignParentStart="true" />
+
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/shorts"
+            android:gravity="center"
+            app:srcCompat="@drawable/ic_menu_gallery" />
+
+        <TextView
+            android:id="@+id/data"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:gravity="left"
+            android:textColor="@color/textLabel"
+            android:textSize="14dp"
+            tools:text="Дата"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true" />
+
+    </RelativeLayout>
+
+</layout>

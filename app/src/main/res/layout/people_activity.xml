@@ -7,7 +7,7 @@
   <data>
 
     <variable
-        name="mainViewModel"
+        name="maiViewModel"
         type="com.example.jhordan.people_mvvm.viewmodel.PeopleViewModel"/>
   </data>
 
@@ -19,7 +19,8 @@
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:theme="@style/AppTheme.AppBarOverlay">
+        android:theme="@style/AppTheme.AppBarOverlay"
+        >
 
       <android.support.v7.widget.Toolbar
           android:id="@+id/toolbar"
@@ -42,15 +43,15 @@
           android:id="@+id/progress_people"
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
-          app:visibility="@{mainViewModel.peopleProgress}"/>
+          app:visibility="@{maiViewModel.peopleProgress}"/>
 
       <TextView
           android:id="@+id/label_status"
           android:layout_width="match_parent"
           android:layout_height="wrap_content"
           android:gravity="center"
-          android:text="@{mainViewModel.messageLabel}"
-          app:visibility="@{mainViewModel.peopleLabel}"/>
+          android:text="@{maiViewModel.messageLabel}"
+          app:visibility="@{maiViewModel.peopleLabel}"/>
 
       <android.support.v7.widget.RecyclerView
           android:id="@+id/list_people"
@@ -59,7 +60,7 @@
           android:clipToPadding="false"
           android:scrollbars="vertical"
           app:layout_behavior="@string/appbar_scrolling_view_behavior"
-          app:visibility="@{mainViewModel.peopleRecycler}"
+          app:visibility="@{maiViewModel.peopleRecycler}"
           tools:listitem="@layout/item_people"/>
 
 
@@ -71,7 +72,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|end"
         android:layout_margin="@dimen/fab_margin"
-        android:onClick="@{mainViewModel::onClickFabLoad}"
+        android:onClick="@{maiViewModel::onClickFabLoad}"
         android:src="@drawable/ic_add_24dp"/>
 
   </android.support.design.widget.CoordinatorLayout>
